@@ -1,0 +1,73 @@
+.hero-container {
+  background: url("../Media/herofour.png");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; /* Ensures gradient and image blend subtly */
+  height: 120vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #2f2f2f;
+  padding: 40px;
+}
+
+/* Logo */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 700px;
+  padding-top: 100px; /* Adjust for logo spacing */
+}
+
+.hero-title {
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the text */
+  backdrop-filter: blur(1px); /* Blur effect */
+}
+
+.hero-text {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  width: 90%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the text */
+  backdrop-filter: blur(1px); /* Blur effect */
+}
+
+/* CTA Button */
+.cta-button {
+  margin-top: 30px;
+  background-color: #798645; /* Olive green */
+  color: white;
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #798645;
+}
+
+@media (min-width: 1600px) {
+  .hero-container {
+    background-position: center 19%; /* Center horizontally, offset vertically */
+  }
+}

@@ -1,0 +1,54 @@
+.the-sell {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: #798645;
+  margin: 100px 10px;
+}
+
+.main-sell {
+  gap: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-text {
+  width: 40%;
+}
+
+.sell-text h1 {
+  margin: 0px;
+}
+
+.sell-text h2 {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.me {
+  width: 40%;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.me img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .me {
+    display: none;
+  }
+
+  .sell-text {
+    width: 80%;
+  }
+}

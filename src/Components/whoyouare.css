@@ -1,0 +1,43 @@
+.clients-section {
+  padding: 150px 10px;
+  background: #626f47;
+  text-align: center;
+  color: #fff;
+}
+
+.clients-section h1 {
+  margin-bottom: 30px;
+}
+
+.clients-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.client-card {
+  background: #798645;
+  border-radius: 12px;
+  padding: 30px;
+  flex: 1 1 calc(30% - 20px); /* Flexible 3-column grid */
+  max-width: 400px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.client-card h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.client-card p {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+}

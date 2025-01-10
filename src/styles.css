@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-family: gelica, sans-serif;
+  font-weight: 900;
+  font-size: 4.7rem;
+  line-height: 1;
+  margin: 0px;
+}
+
+h2 {
+  font-family: gelica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+/* 
+LTC Goudy Heavyface Italic
+font-family: "ltc-goudy-heavyface-pro", sans-serif;
+font-weight: 400;
+font-style: italic; */
+
+button {
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 3.3rem;
+  }
+}
+
+li {
+  font-family: raleway, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 40px;
+}
