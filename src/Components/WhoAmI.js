@@ -1,14 +1,14 @@
 import "./whoami.css";
 
-import teatime from "../Media/teatime.mp4";
+// import teatime from "../Media/teatime.mp4";
 
 export default function WhoAmI() {
   return (
     <div className="who-am-i">
-      <video autoPlay muted loop className="background-video">
+      {/* <video autoPlay muted loop className="background-video">
         <source src={teatime} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <div className="content">
         <h1>Who I Am.</h1>
         <p>

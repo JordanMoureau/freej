@@ -1,4 +1,4 @@
-import video from "../Media/thevibetrim.mp4";
+// import video from "../Media/thevibetrim.mp4";
 import "./awareness.css";
 
 export default function Awareness() {
@@ -26,7 +26,7 @@ export default function Awareness() {
 
         <div className="aware-broll-vid">
           {/* Optimized video tag */}
-          <video
+          {/* <video
             src={video}
             autoPlay
             loop
@@ -36,7 +36,7 @@ export default function Awareness() {
             className="video-element"
           >
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
       </div>
     </div>
