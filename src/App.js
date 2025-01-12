@@ -2,7 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles.css";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
+import Loader from "./Components/Loader";
 
 // Components
 import PrequalQuiz from "./Components/PrequalQuiz";
@@ -38,14 +40,57 @@ function MainPage() {
     </div>
   );
 }
-
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const minimumLoadingTime = 7000; // Minimum 7 seconds
+    const startTime = Date.now(); // Track the start time
+
+    const preloadVideos = async () => {
+      const videoPaths = [
+        "/path-to-teatime.mp4", // Replace with your actual video paths
+        "/path-to-thevibetrim.mp4",
+      ];
+
+      const videoPromises = videoPaths.map((path) => {
+        return new Promise((resolve, reject) => {
+          const video = document.createElement("video");
+          video.src = path;
+          video.oncanplaythrough = () => resolve();
+          video.onerror = (err) => reject(err);
+        });
+      });
+
+      try {
+        await Promise.all(videoPromises); // Wait for all videos to preload
+      } catch (error) {
+        console.error("Error loading videos:", error); // Log any errors
+      }
+
+      // Ensure minimum loading time
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = minimumLoadingTime - elapsedTime;
+      if (remainingTime > 0) {
+        setTimeout(() => setIsLoading(false), remainingTime);
+      } else {
+        setIsLoading(false);
+      }
+    };
+
+    preloadVideos();
+  }, []);
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/prequalquiz" element={<PrequalQuiz />} />
-      </Routes>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/prequalquiz" element={<PrequalQuiz />} />
+        </Routes>
+      )}
     </Router>
   );
 }

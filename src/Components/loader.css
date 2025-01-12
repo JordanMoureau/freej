@@ -1,0 +1,34 @@
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  flex-direction: column;
+  background-color: #fefae0;
+}
+
+.icon-container svg {
+  color: #798645;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #798645; /* Adjust to match your theme */
+  font-family: raleway, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
