@@ -9,7 +9,7 @@ function Loader() {
       <FaMountain size={40} style={{ margin: "10px" }} />
       <CgCoffee size={40} style={{ margin: "10px" }} />
       <LiaDogSolid size={40} style={{ margin: "10px" }} />
-      <p>Loading your videos... Hang tight!</p>
+      <p>Loading...</p>
     </div>
   );
 }

@@ -27,7 +27,6 @@
 .carousel-row {
   display: flex;
   gap: 20px;
-  animation: scroll-left 15s linear infinite;
 }
 
 .carousel-row.reverse {
@@ -35,7 +34,6 @@
   display: flex;
   justify-content: end;
   align-items: end;
-  animation: scroll-right 23s linear infinite;
 }
 
 .carousel-row::after {
@@ -78,25 +76,6 @@
   margin-bottom: 5px;
 }
 
-/* Keyframes for scrolling animation */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(190%);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .carousel-container {
@@ -116,57 +95,3 @@
     font-size: 0.9rem;
   }
 }
-
-/* .credibility-container {
-  background-color: #fefae0;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.credibility-title {
-  font-size: 2.7rem;
-  color: #798645;
-  margin: 0px;
-}
-
-.credibility-container h2 {
-  color: #798645;
-  margin-top: 5px;
-  margin-bottom: 40px;
-}
-.credibility-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.credibility-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.credibility-card:hover {
-  transform: translateY(-5px);
-}
-
-.credibility-stat {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #798645;
-  margin-bottom: 10px;
-}
-
-.credibility-description {
-  font-size: 1rem;
-  color: #798645;
-}
-
-@media (max-width: 768px) {
-  .credibility-cards {
-    grid-template-columns: 1fr;
-  }
-} */
