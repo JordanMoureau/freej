@@ -93,3 +93,9 @@ a {
   font-style: italic;
   margin-top: 40px;
 }
+
+@media (max-width: 480px) {
+  a {
+    margin-top: 10px;
+  }
+}

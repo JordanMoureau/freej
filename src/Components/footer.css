@@ -47,3 +47,9 @@
 .footer-socials a:hover {
   color: #f2eed7; /* Replace with hover color */
 }
+
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+  }
+}
