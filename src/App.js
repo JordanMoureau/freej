@@ -44,13 +44,14 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const minimumLoadingTime = 7000; // Minimum 7 seconds
-    const startTime = Date.now(); // Track the start time
+    const minimumLoadingTime = 4000;
+    const startTime = Date.now();
 
     const preloadVideos = async () => {
       const videoPaths = [
-        "/path-to-teatime.mp4", // Replace with your actual video paths
-        "/path-to-thevibetrim.mp4",
+        "../Media/teatime.mp4",
+        "../Media/thevibetrim.mp4",
+        "../Media/hero.png",
       ];
 
       const videoPromises = videoPaths.map((path) => {
@@ -65,7 +66,7 @@ function App() {
       try {
         await Promise.all(videoPromises); // Wait for all videos to preload
       } catch (error) {
-        console.error("Error loading videos:", error); // Log any errors
+        console.error("Error loading videos:", error); // Log errors
       }
 
       // Ensure minimum loading time
