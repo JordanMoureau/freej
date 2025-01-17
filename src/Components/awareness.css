@@ -66,3 +66,17 @@ video {
     width: 80%;
   }
 }
+
+@media (max-width: 450px) {
+  .awareness {
+    gap: 30px;
+  }
+  .aware-broll-vid {
+    height: 400px;
+    width: 90%;
+  }
+
+  .aware-head {
+    width: 90%;
+  }
+}
