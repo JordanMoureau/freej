@@ -65,3 +65,9 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 450px) {
+  .endgame {
+    padding: 10px;
+  }
+}
