@@ -32,7 +32,7 @@ export default function Awareness() {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="none"
             className="video-element"
           >
             Your browser does not support the video tag.
