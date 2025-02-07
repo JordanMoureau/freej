@@ -85,8 +85,13 @@ export default function PopUp() {
         <div className="close-btn" onClick={closePopup}>
           &times;
         </div>
-        <h1>5 ChatGPT prompts for Bootstrapping your Marketing</h1>
-        <p>You've never seen using AI like this before</p>
+        <h1>5 ChatGPT prompts to Grow your Business</h1>
+        <h2>(That No One Else is Talking About)</h2>
+        <p>
+          Here are 5 AI strategies you aren't using—but should be. Join my
+          mailing list and get instant access to a free mini e-book with the top
+          5 ChatGPT prompts that have helped me scale my business.
+        </p>
         <form className="pop-up-form" onSubmit={handleSubmit}>
           <label htmlFor="mce-EMAIL">
             Email Address <span className="asterisk">*</span>
@@ -125,7 +130,7 @@ export default function PopUp() {
             />
           </div>
           <div className="clear">
-            <button type="submit">Submit</button>
+            <button type="submit">Get The Guide</button>
           </div>
           {error && <p className="error-message">{error}</p>}
         </form>

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import "./styles.css";
 
 import { useState, useEffect } from "react";
@@ -19,15 +24,16 @@ import Cred from "./Components/Credibility";
 import WhoYouAre from "./Components/WhoYouAre";
 import Endgame from "./Components/Endgame";
 import Footer from "./Components/Footer";
+import Websites from "./Websites/Websites";
 
 import PopUp from "./Components/PopUp";
 
 function MainPage() {
   return (
-    <div className="bg-gray-100 text-gray-800 min-h-screen">
-      {/* <PopUp /> */}
+    <div>
+      <PopUp />
       <Hero />
-      <main className="flex flex-col items-center justify-center p-8">
+      <main>
         <Awareness />
         <WhatYouGet />
         <SellTwo />
@@ -41,57 +47,23 @@ function MainPage() {
   );
 }
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  function LeadMagnetRedirect() {
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    const minimumLoadingTime = 4000;
-    const startTime = Date.now();
+    useEffect(() => {
+      window.location.href = "/leadmagnet.pdf"; // Redirect to the file
+    }, []);
 
-    const preloadVideos = async () => {
-      const videoPaths = [
-        "../Media/teatime.mp4",
-        "../Media/thevibetrim.mp4",
-        "../Media/hero.png",
-      ];
-
-      const videoPromises = videoPaths.map((path) => {
-        return new Promise((resolve, reject) => {
-          const video = document.createElement("video");
-          video.src = path;
-          video.oncanplaythrough = () => resolve();
-          video.onerror = (err) => reject(err);
-        });
-      });
-
-      try {
-        await Promise.all(videoPromises); // Wait for all videos to preload
-      } catch (error) {
-        console.error("Error loading videos:", error); // Log errors
-      }
-
-      // Ensure minimum loading time
-      const elapsedTime = Date.now() - startTime;
-      const remainingTime = minimumLoadingTime - elapsedTime;
-      if (remainingTime > 0) {
-        setTimeout(() => setIsLoading(false), remainingTime);
-      } else {
-        setIsLoading(false);
-      }
-    };
-
-    preloadVideos();
-  }, []);
-
+    return null; // No UI needed
+  }
   return (
     <Router>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/prequalquiz" element={<PrequalQuiz />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/prequalquiz" element={<PrequalQuiz />} />
+        <Route path="/websites" element={<Websites />} />
+        <Route path="/leadmagnet" element={<LeadMagnetRedirect />} />
+      </Routes>
     </Router>
   );
 }
