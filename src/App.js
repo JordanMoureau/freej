@@ -50,8 +50,11 @@ function App() {
   function LeadMagnetRedirect() {
     useEffect(() => {
       const link = document.createElement("a");
-      link.href = "/leadmagnet.pdf"; // Ensure this is the correct path
-      link.setAttribute("download", "leadmagnet.pdf"); // Forces download
+      link.href = "/ChatGPTfivepromptsfromfreelancejordan.pdf"; // Ensure this is the correct path
+      link.setAttribute(
+        "download",
+        "ChatGPTfivepromptsfromfreelancejordan.pdf"
+      ); // Forces download
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -66,7 +69,10 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/prequalquiz" element={<PrequalQuiz />} />
         <Route path="/websites" element={<Websites />} />
-        <Route path="/leadmagnet" element={<LeadMagnetRedirect />} />
+        <Route
+          path="/ChatGPTfivepromptsfromfreelancejordan"
+          element={<LeadMagnetRedirect />}
+        />
       </Routes>
     </Router>
   );
