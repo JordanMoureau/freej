@@ -48,14 +48,18 @@ function MainPage() {
 }
 function App() {
   function LeadMagnetRedirect() {
-    const navigate = useNavigate();
-
     useEffect(() => {
-      window.location.href = "/leadmagnet.pdf"; // Redirect to the file
+      const link = document.createElement("a");
+      link.href = "/leadmagnet.pdf"; // Ensure this is the correct path
+      link.setAttribute("download", "leadmagnet.pdf"); // Forces download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }, []);
 
     return null; // No UI needed
   }
+
   return (
     <Router>
       <Routes>
